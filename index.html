@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Passionet</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet"></head>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA6OjoAP///wD6+voAgoGBAJmXlwDExMQA
+    qKelAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIiIiIiICZFRUVFRUViJWdnZ2dnZ1IkdnZ2dnZ2QidERERERERyJGMzMzMzNkIkEzMzMzMxQiQTMzMzMzFCJBMzMzMzMUIkEzMzMzMxQiQTMzM
+    zMzFCJWERERERFlImVERERERFYgIiIiIiIiIgAAAAAAAAAAD//wAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAD//wAA" rel="icon" type="image/x-icon" />
+<body>
+    <header class="nav">
+        <ul>
+           <li><a href="#home">Home</a></li>
+           <li><a href="#aboutme">About Me</a></li>
+           <li><a href="#certi">Certifications</a></li>
+           <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="section-one">
+            <img id="home" src="img/1.jpg" alt="Main photo">
+            <h1 class="main-text">Junior 
+                <span class="dev">
+            Front-End Developer</span>
+            </h1>
+            <p>with a passion for learning</p> 
+    </div>
+
+    <h3 class="sct-three" id="aboutme">About <span class="me">Me</span></h3>
+    <main class="section-main">
+            <div class="section-main-left">
+                <p>I had been working as an Loading supervisor almost 
+                for 5 years before I switched to a new profession</br> - Front-End Developer. 
+                I love it. If only I had done it earlier. </br> </br>
+                I am highly-motivated, result oriented, self-driven,
+                 hard-working, fast learner and smart eager </br>to 
+                 be a part of the team, learn new technologies, become a 
+                 valuable employee of the company</br> and bring it success.</br> </br>
+                Well-organized with an ability to prioritize tasks 
+                and capability to work, develop and grow in</br> the 
+                company. Experienced in communicating with the team and clients. Attentive and accurate</br> to details. </br>
+                Below is a list of my current technical skills: </br>
+                </p>
+                <img class="first-pic" src="img/html.png" alt="HTML" title="HTML">
+                <img src="img/css.png" alt="CSS" title="CSS">
+                <img src="img/js.png" alt"JS" title="JavaScript">
+            </div>
+            <div class="section-main-right">
+                <figure>
+                <img src="img/2.jpg" alt="Picture of me">
+                <figcaption><cite>Ivan Rajčić</cite></figcaption>
+                </figure>
+            </div>
+    </main>
+
+    <div class="certifications">
+        <h3 id="certi">My <span class="me">Certifications</span></h3>
+        <ul>
+            <div class="hover-img">
+                <li><a target="_blank" href="https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/">
+                    <cite>Build Responsive Real World Websites with HTML5 and CSS3.</cite> -Jonas Schmedtmann, Udemy.com<span>
+                        <img src="img/3.jpg" alt="img" height="400">
+                </span></a></li>
+            </div>
+            <div class="hover-img">
+                <li><a target="_blank" href="https://www.udemy.com/advanced-css-and-sass/">
+                    <cite>Advances CSS and Sass: Flexbox, Grid, Animations and more!</cite> -Jonas Schmedtmann, Udemy.com<span>
+                        <img src="img/4.jpg" alt="img" height="400">
+                </span></a></li>
+            </div>
+            <div class="hover-img">
+                <li><a target="_blank" href="https://www.udemy.com/the-complete-javascript-course/">
+                    <cite>The Complete Java Script Course 2019.</cite> -Jonas Schmedtmann, Udemy.com<span>
+                        <img src="img/7.jpg" alt="img" height="400">
+                </span></a></li>
+            </div>
+        </ul>
+    </div>
+
+    <h3 id="contact" class="sct-three">Contact <span class="me">Me</span></h3>
+    <section class="section-form">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.8106123881894!2d16.31926531545609!3d43.54798957912497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133542e852423047%3A0xd31f486fa9103de3!2sNovskih+Te%C5%BEaka%2C+21216%2C+Ka%C5%A1tel+Novi!5e0!3m2!1shr!2shr!4v1565699958325!5m2!1shr!2shr" width="40%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+        <div class="row" id="form">
+            <form method="post" action="mailer.php" class="contact-form">
+                <div class="row">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                </div>
+                <div class="row">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                </div>
+                <div class="row">
+                        <label>Drop me a line</label>
+                        <textarea name="message" placeholder="Your message"></textarea>
+                </div>
+                <div class="row">
+                        <label>&nbsp;</label>
+                </div>
+                    <button type="submit" class="btn">
+                        <span class="btn__visible">Contact Me!</span>
+                        <span class="btn__invisible">You rock!</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-media">
+                <a target="_blank" href="https://www.facebook.com/ivan.rajcic1">
+                    <svg class="social-icon facebook">
+                        <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+                    </svg>
+                </a>
+                <a target="_blank" href="https://github.com/irajcic">
+                    <svg class="social-icon github">
+                        <use xlink:href="img/sprite.svg#icon-github"></use>
+                    </svg>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/ivan-raj%C4%8Di%C4%87-b92905189/">
+                    <svg class="social-icon linkedin">
+                        <use xlink:href="img/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </div>
+
+                <p>Copyright &copy;2019 My Portfolio by Ivan
+                    Rajčič
+                </p>
+        </footer>
+
+
+<script>
+let anchorlinks = document.querySelectorAll('a[href^="#"]')
+ 
+ for (let item of anchorlinks) { 
+     item.addEventListener('click', (e)=> {
+         let hashval = item.getAttribute('href')
+         let target = document.querySelector(hashval)
+         target.scrollIntoView({
+             behavior: 'smooth',
+             block: 'start'
+         })
+         history.pushState(null, null, hashval)
+         e.preventDefault()
+     })
+ }
+</script>
+</body>
+</html>
+
+
