@@ -124,50 +124,30 @@ h3:after {
 /************************************** 
 *****************SECTION ONE************
  ****************************************/
+ .sct-three {
+  background-color: rgb(243, 243, 243);
+ }
 
-.section-one img {
-  position: relative;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-  filter: brightness(50%);
-  animation: kenburns-left 5s ease-out alternate-reverse both;
+.section-one {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/1.jpg);
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+  background-repeat: no-repeat;
+  background-position: cover;
+  height: 95vh;
+  background-attachment: fixed;
 }
 
-@media only screen and (max-width: 28.625em) {
-  .section-one img {
-  position: relative;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  }
-}
 
-@keyframes kenburns-left {
-  0% {
-  transform: scale(1) translate(0, 0);
-  transform-origin: 16% 50%;
-  }
-  50% {
-    transform: scale(1.25) translate(0, 0);
-    transform-origin: left;
-    }
-  100% {
-  transform: scale(1) translate(0, 0);
-  transform-origin: left;
-  }
-}
 
 .main-text {
     font-size: 4rem;
     color: white;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
 }
 
 @media only screen and (max-width: 88em) {
@@ -315,17 +295,12 @@ h3:after {
 }
 
 
- .sct-three {
-  background-color: rgb(243, 243, 243);
- }
-
  .section-main-left img {
    height: 5rem;
    width: 5rem;
    margin-top: 2.5rem; 
    margin-left: 5rem;
    margin-bottom: 3rem;
-   animation: heartbeat 1.5s ease-in-out infinite both;
  }
 
  @media only screen and (max-width: 68em) {
@@ -341,7 +316,7 @@ h3:after {
   .section-main-left img {
     height: 3rem;
     width: 3rem;
-    margin-left: 3.1rem;
+    margin-left: 5.5rem;
   }
 }
 
@@ -384,7 +359,7 @@ h3:after {
 }
 */
 
- .section-main-left p{
+ .section-main-left p {
   font-size: 1.2rem;
 }
 
@@ -394,6 +369,7 @@ h3:after {
     display: flex;
     justify-self: center;
     align-self: center;
+    text-align: center;
   }
 }
 
@@ -436,7 +412,7 @@ figcaption {
 *****************SECTION THREE************
  ****************************************/
 .certifications {
-  height: 35rem;
+  height: 30rem;
 }
 
  .certifications a {
@@ -481,6 +457,99 @@ figcaption {
    transform: translate(-50%, 10%);
  }
 
+ 
+  /************************************** 
+*****************PROJECTS ***************
+ ****************************************/
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgb(243, 243, 243);
+}
+
+@media only screen and (max-width: 70em) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+ .container {
+  position: relative;
+  width: 50%;
+
+  padding: 2rem;
+  display: flex;
+}
+
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #c69963;
+  border-radius: 100rem;
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 2.3rem;
+  text-decoration: none;
+  transition: .2s all;
+}
+
+.text:hover {
+  letter-spacing: .4rem;
+}
+
+.codez {
+  color: lightgray;
+  padding: .1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  writing-mode: vertical-rl;
+  background: linear-gradient(to bottom right, #c69963, #b87626);
+  transition: .2s all;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 70em) {
+  .codez {
+    font-size: .8rem;
+  }
+}
+
+.codez:hover {
+  letter-spacing: 1.3rem;
+}
+
  /************************************** 
 *****************SECTION FORM************
  ****************************************/
@@ -488,7 +557,7 @@ figcaption {
  iframe {
   margin-bottom: 3rem;
   filter: sepia(30%);
-  border-radius: .5rem;
+  border-radius: .9rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.24);
 }
 
@@ -503,7 +572,6 @@ figcaption {
 
  .section-form {
   padding-top: 2rem;
-  background-color: rgb(243, 243, 243); 
 
   display: flex;
   justify-content: space-around;
@@ -584,7 +652,7 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
   }
 }
 
@@ -596,7 +664,7 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
   }
 }
 
@@ -611,9 +679,16 @@ textarea {
   border: 1px solid #ccc;
 }
 
+
+
 textarea {
-  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 20rem;
 }
+
 .btn {
   font-size: .9rem;
   font-weight: 300;
@@ -626,11 +701,13 @@ textarea {
   overflow: hidden;
   cursor: pointer; 
   margin-left: 8rem;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 25.625em) {
   .btn {
-  margin-left: 0;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
   }
 }
 
@@ -755,19 +832,13 @@ footer p {
 
 .facebook:hover {
   fill: #3C5A99;
-  height: 3rem;
-  width: 3rem;
 }
 .github:hover {
   fill: #333;
-  height: 3rem;
-  width: 3rem;
 }
 
 .linkedin:hover {
   fill: #0077B5;
-  height: 3rem;
-  width: 3rem;
 }
 
 @media only screen and (max-width: 70em) {
@@ -778,21 +849,3 @@ footer p {
     width: 1.5rem;
   }
 }
-
-/******************************
-*************MAIL**************
-******************************/
-
-.form-messages {
-  width: 70%;
-  margin: 0 auto;
-  padding: .1rem;
-  border-radius: .3rem;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  color: black;
-}
-
-.success { background-color: rgba(40, 214, 16, 0.76); }
-
-.error { background-color: rgb(219, 17, 17); }
