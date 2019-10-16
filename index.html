@@ -13,20 +13,36 @@
     zMzFCJWERERERFlImVERERERFYgIiIiIiIiIgAAAAAAAAAAD//wAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAD//wAA" rel="icon" type="image/x-icon" />
 </head>
 <body>
-    <header class="nav">
-        <ul>
-           <li><a href="#home">Home</a></li>
-           <li><a href="#aboutme">About Me</a></li>
-           <li><a href="#certi">Certifications</a></li>
-           <li><a href="#certi">Projects</a></li>
-           <li><a href="#contact">Contact</a></li>
-        </ul>
-    </header>
+
+<nav id="navbar">
+
+    <ul class="nav-links">
+        <li>
+            <a href="#home">Home</a>
+        </li>
+        <li>
+            <a href="#aboutme">About</a>
+        </li>
+        <li>
+            <a href="#certi">Ceritifactions</a>
+        </li>
+        <li>
+            <a href="#project">Projects</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+
 
     <div id="home" class="section-one">
-            <h1 class="main-text">Junior Front-End Developer</h1>
-            <p>with a passion for learning</p> 
-    </div>
+            <h1 class="main-text">Junior Front-End Developer</h1>    </div>
 
 
     <h3 class="sct-three" id="aboutme">About <span class="me">Me</span></h3>
@@ -100,7 +116,7 @@
         </div>
 
         <div class="container">
-            <img target="_blank" src="img/13.jpg" alt="Image" class="image" style="width:100%">
+            <img target="_blank" src="img/13.jpg" alt="Image" class="image imgblur" style="width:100%">
             <div class="middle">
             <a href="google.com" target="_blank" class="text">Demo</a>
             </div>
@@ -108,7 +124,7 @@
         </div>
 
         <div class="container">
-            <img target="_blank" src="img/13.jpg" alt="Image" class="image" style="width:100%">
+            <img target="_blank" src="img/13.jpg" alt="Image" class="image imgblur" style="width:100%">
             <div class="middle">
             <a href="google.com" target="_blank" class="text">Demo</a>
             </div>
@@ -225,7 +241,52 @@ let anchorlinks = document.querySelectorAll('a[href^="#"]')
       });
     }
 
+    const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+
+    burger.addEventListener('click', () => {
+            // Toggle Nav
+        nav.classList.toggle('nav-active');
+
+            // Animate Links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+               link.style.animation = ''; 
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
+            }
+        });
+            // Burger animation
+            burger.classList.toggle('toggle');
+    });
+
+}
+
+    navSlide();
+
     window.addEventListener('scroll', debounce(checkSlide));
+
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 </script>
 </body>
 </html>

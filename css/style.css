@@ -64,63 +64,144 @@ h3:after {
 /************************************** 
 *****************NAVIGATION************
  ****************************************/
-
-.nav {
-  display: flex;
-  align-items: center;
+nav {
   justify-content: flex-end;
-  background-color: rgba(26, 26, 26, 0.596);
-  color: rgb(255, 255, 255);
-  position: fixed;
-  width: 100%;
-  padding: 1.3rem;
+  padding-right: 1.5rem;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgba(0, 0, 0, 0.589);
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+  background-color: rgba(0, 0, 0, 0);
+  }
+ }
+
+
+.nav-links {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  margin-right: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+  background-color: rgba(0, 0, 0, 0);
+  }
+ }
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links a {
+  color: rgb(233, 233, 233);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: .5rem;
+  transition: all .2s;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #c69963;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links a {
+    color: white;
+    text-transform: uppercase;
+    height: 100vh;
+  }
+ }
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #d3903d;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(150%);
+    transition: transform 0.5s ease-in;
+    background-image: linear-gradient(to right, #c69963, #d3903d);
+    padding: 2rem;
+    margin-right: 0;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links a:hover {
+    border-bottom: 2px solid white;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
   z-index: 100;
 }
 
-@media only screen and (max-width: 70em) {
-  .nav {
-    justify-content: center;
-    position: fixed;
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
-@media only screen and (max-width: 25.625em) {
-  .nav {
-    padding: .3;
-  }
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px,6px);
 }
 
-.nav ul {
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
   display: flex;
 }
-.nav a,
-.nav li {
-  list-style-type: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  margin-right: .5rem;
-  transition: .3s all;
-}
-
-
-@media only screen and (max-width: 35.625em) {
-  .nav a,
-  .nav li {
-    font-size: .7rem;
-  }
-}
-
-.nav a:link,
-.nav a:visited {
-  color: white;
-}
-
-.nav a:hover {
-  color: #c69963;
-  border-bottom: .2rem solid #c69963;
-}
-
 /************************************** 
 *****************SECTION ONE************
  ****************************************/
@@ -146,7 +227,7 @@ h3:after {
 @media only screen and (max-width: 73em) {
   .section-one {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/1.jpg);
-    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    clip-path: none;
     background-repeat: no-repeat;
     height: 95vh;
     background-position: center center;
@@ -200,40 +281,6 @@ h3:after {
   }
 }
 
-.section-one p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1.3rem;
-  color: white;
-  animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
-  margin-top: .7rem;
-}
-
-@media only screen and (max-width: 88em) {
-  .sction-one p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: .7rem;
-    color: white;
-    animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
-  }
-}
-
-@media only screen and (max-width: 24em) {
-  .section-one p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: .6rem;
-    color: white;
-    animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
-  }
-}
 
 .main-text,
 .section-one p {
@@ -415,6 +462,10 @@ figcaption {
 
   padding: 2rem;
   display: flex;
+}
+
+.imgblur {
+  filter: blur(1.3px);
 }
 
 @media only screen and (max-width: 50em) {
@@ -776,6 +827,10 @@ footer p {
   fill: #fff;
   transition: .2s all;
   cursor: pointer;
+}
+
+.social-media a {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 25.625em) {
